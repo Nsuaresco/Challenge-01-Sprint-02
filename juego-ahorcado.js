@@ -148,6 +148,7 @@ function play(){
   var tries = 0;
   var winner=0;
   let unicW=false;
+  document.getElementById("empty").focus();
   ValidStor();
   play();
 
