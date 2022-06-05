@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width">
+        <title>Juego del Ahorcado</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="imagenes/Vector.png">
+        </header>
+        <main>
+            <div id="draw">
+                <canvas id="man" width="310" height="310"> </canvas>
+                <box id="message"></box>
+            </div>
+            <div class="word" id="correctLetters"></div>
+            <div class="word" id="wordSpaces"></div>
+            <div id="incorrectLetters">
+                <box id="mistakes"></box>
+            </div>
+            <div id="optionsPanel">
+                    <button class = "options" id="newGame">Nuevo juego</button>
+                    <input type="button" class="options" id="desistir" onclick="location.href='index.html';" value="Desistir   &#128532" />
+            </div>
+        </main>
+    </body>
+
+    <script src="formArray.js"></script>
+    <script src="juego-ahorcado.js"></script>
+    <script src="palabras.js"></script>
+    

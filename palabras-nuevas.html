@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width">
+        <title>Añadir nueva word</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <img id="logo" src="imagenes/Vector.png">
+        </header>
+
+        <main>
+
+            <div id="catchWord">
+                <p class="unvisible" id="notify"></p> 
+                <textarea style="text-transform:uppercase" id="inputWords" placeholder= "Ingrese palabra nueva" title="solo letras NO números ni caractéres especiales"></textarea></textarea>
+                <button class ="options2" id="add">Añadir</button>
+                <p class="unvisible"id = "notification"></p>
+
+            </div>
+
+            <div id="options">
+                <input class ="options2" type="button" onclick="location.href='juego-ahorcado.html'"; value="Jugar" />
+                <button class ="options2" id="personalized">Jugar con palabra ingresada</button>
+            </div>
+
+            <div id="optionsWords" class="unvisible">
+                <p id="instructions">Para eliminar una palabra, seleccione la palabra y dé click en el botón "Eliminar"</p>
+                <select id="wordsList"></select>
+                    <button class="optionsDelete" id="deleteSelection">Eliminar palabra específica</button>
+                    <button class="optionsDelete" id="delete">Eliminar registro de palabras por usuario</button>
+
+
+            </div>
+        </main>
+        <script src="formArray.js"></script>
+        <script src="palabras.js"></script>
+        <script src="newWord.js"></script>
+        
+    </body>

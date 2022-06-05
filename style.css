@@ -1,0 +1,446 @@
+
+body{
+ font-family: 'Inter', sans-serif;   
+ background-color: #F3F5FC;
+ padding: 40px;
+ margin-left: 44px;
+}
+
+#iniciateButton{
+    position: relative;
+    top:15.9vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+#iniciate{
+    width: 23.25%;
+    height: 114px;
+    background: #0A3871;
+    border-radius: 24px;
+    border-width: 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    display: block;
+}
+
+#addWordButton{
+    position: relative;
+    top:18.9vw;
+    display: flex;
+    justify-content: center;
+}
+#addWord{
+    width: 20.5%;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    display: block;
+}
+
+/*CSS JUEGO AHORCADO*/
+
+#draw{
+    display: flex;
+    justify-content: center;
+}
+
+#message{
+    width:auto;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.winner{
+    color: rgb(82, 241, 82);
+}
+
+.looser{
+    color: red;
+}
+.word{   
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 48px;
+}
+
+#correctLetters{
+    margin-top:5vw;
+}
+
+#incorrectLetters{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 24px;
+}
+
+#mistakes{
+    width: 30vw;
+    height: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mistakes{
+    display:inline-block;
+    color: #0A3871;
+}
+
+#optionsPanel{
+    display: flex;
+    justify-content: center;
+}
+
+.options{
+    width: 24.3vw;
+    height: 4.76vw;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#newGame{
+    background: #0A3871;
+    border-radius: 24px;
+    color: #F3F5FC;
+}
+
+#desistir{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    background-color: none;
+    margin-left: 24px;
+    color: #0A3871;
+}
+
+box{
+    text-align: center;
+    color: #0A3871;
+    white-space: pre-wrap;
+}
+
+.unvisible{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+/*Estilos para palabras-nuevas.html*/
+
+#catchWord{
+    position: relative;
+    height: 6vw;
+    width: 63vw;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin-top: 4vw;;
+}
+
+#inputWords{
+    width: 30vw;
+    height: 4vw;
+    resize:none;
+    font: inherit;
+    font-size: 14px;
+}
+
+#inputWords:focus{
+    outline: none;
+}
+
+#inputWords::placeholder{
+    color: rgb(112, 128, 158);
+    text-transform:lowercase;
+    
+}
+
+#notify{
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+    position: relative;
+    top: .5vw;
+}
+
+#add{
+    margin-top: 0;   
+}
+
+#notification{
+    position: relative;
+    left: 5.7vw;
+}
+
+#options{
+    position: relative;
+    top:4vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+.options2{
+    width: 24.3vw;
+    height: 4.76vw;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #F3F5FC;
+    background: #0A3871;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    display: block;
+}
+
+#optionsWords{
+    position: relative;
+    top:8vw;
+}
+
+.optionsDelete{
+    width: 24.3vw;
+    height: 4.76vw;
+    box-sizing: border-box;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #F3F5FC;
+    background: #0A3871;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    display: block;
+    margin: 3vw;
+    position: relative;
+    bottom: 8vw;
+    left: 27vw;
+}
+
+#delete{
+    justify-content:center;
+    flex-wrap:wrap;
+    position: relative;
+    bottom: 9.5vw;
+}
+
+#deleteSelection{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+#instructions{
+    color:#0A3871;
+    font-size: 16px;
+}
+
+.invalid{
+    background-color:red;
+
+}
+
+.valid{
+   background-color: green;
+}
+
+#wordsList{
+    min-width: 10vw;
+    height: 3vw;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #0A3871;
+    border-radius: 12px;
+    color: #0A3871;
+    background: #F3F5FC;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    display: inline-block;
+    margin: 3vw;
+    position: relative;
+    top: 5vw;
+}
+
+@media screen and (max-width:820px){
+    body{
+        margin-left: 25px;
+    }
+
+    .options{
+        width: 36vw;
+        height: 10vw;
+        font-size: 16px;
+        margin-top: 10vw;
+    }
+
+    /*palabras-nuevas*/
+
+    #instructions{
+        position: relative;
+        left: 4vw;
+    }
+
+    #inputWords{
+        width: 30vw;
+        height: 8vw;
+        position: relative;
+        left: 3vw;
+    }
+
+    #notification{
+        position: relative;
+        left: 3.4vw;
+        top: 2vw;
+    }
+
+    .options2 {
+        width: 27.3vw;
+        height: 9.76vw;
+    }
+
+    #options{
+        position: relative;
+        top: 13vw;
+    }
+
+    #optionsWords {
+        position: relative;
+        top: 28vw;
+    }
+
+    #add{
+        position: relative;
+        left: 13vw;
+    }
+
+    #wordsList{
+        height: 8vw;
+        min-width: 25vw;
+    }
+
+    .optionsDelete{
+        width: 29vw;
+        height: 11vw;
+    }
+
+    #deleteSelection{
+        position: relative;
+        top: 4.4vw;
+        left: 0vw;
+    }
+
+    #delete{
+        left: 44vw;
+        bottom: 9vw;
+    }
+    /*index*/
+
+    #iniciate{
+        width: 61.25%;
+    }
+
+    #addWord{
+        width: 53.5%;
+    }
+
+}
+@media screen and (max-width:480px){
+    body{
+        margin-left: 25px;
+    }
+
+    #message{
+    position: relative;
+    right: 15vw;
+    }
+
+    /*palabras-nuevas*/
+
+    .options{
+        width: 40vw;
+        height: 13vw;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin-top: 10vw;
+    }
+
+    .options2 {
+        width: 27.3vw;
+        height: 9.76vw;
+    }
+
+    #options{
+        position: relative;
+        top: 16vw;
+    }
+
+    #optionsWords {
+        position: relative;
+        top: 28vw;
+    }
+
+    #add{
+        position: relative;
+        left: 6vw;
+    }
+
+    #wordsList{
+        height: 8vw;
+    }
+
+    .optionsDelete{
+        width: 32vw;
+        height: 21vw;
+    }
+
+    #deleteSelection{
+        position: relative;
+        top: 4.4vw;
+        left: -4vw;
+    }
+
+    #delete{
+        bottom: 19.4vw;
+        left: 35vw;
+    }
+
+    #notification{
+        top:2vw;
+    }
+    /*index*/
+
+    #iniciate{
+        width: 61.25%;
+    }
+
+    #addWord{
+        width: 53.5%;
+    }
+
+    }
+    
