@@ -100,7 +100,7 @@ function check(event){
         }
   }
 }
-document.getElementById("empty").addEventListener('keyup', function(event) {
+document.getElementById("empty").addEventListener('keypress', function(event) {
   check(event);
 });
 document.addEventListener('keyup', function(event) {
