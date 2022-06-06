@@ -60,7 +60,7 @@ function letterSpaces(){
 }
 function check(event){
   
-  document.getElementById("empty").value="";
+  //document.getElementById("empty").value="";
   let wrong=new RegExp("[¡"+wrongLetters+"['Á-ÿá-ÿ +"+'¿?¨_.,#!$%\^&\*;:{}=`´~()”“"/|°¬<>-'+"]");
   if(!stopp && event.key!="Enter"){
   let regexp="["+secret+"]";
