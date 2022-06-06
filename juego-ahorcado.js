@@ -58,8 +58,8 @@ function letterSpaces(){
   }
 
 }
-
-document.addEventListener('keyup', function(event) {
+function check(event){
+  
   document.getElementById("empty").value="";
   let wrong=new RegExp("[¡"+wrongLetters+"['Á-ÿá-ÿ +"+'¿?¨_.,#!$%\^&\*;:{}=`´~()”“"/|°¬<>-'+"]");
   if(!stopp && event.key!="Enter"){
@@ -97,9 +97,14 @@ document.addEventListener('keyup', function(event) {
             mistakes.appendChild(letter);
             letter.setAttribute("class","mistakes");
           }
-
         }
   }
+}
+document.getElementById("empty").addEventListener('keyup', function(event) {
+  check(event);
+});
+document.addEventListener('keyup', function(event) {
+  check(event);
 });
 
 function ValidStor(){
