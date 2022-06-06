@@ -150,7 +150,9 @@ box{
     resize: none;
     outline: none;
     caret-color: transparent;
-    
+    color: transparent;
+    position: absolute;
+    top: 50%;
     }
 
 /*Estilos para palabras-nuevas.html*/
