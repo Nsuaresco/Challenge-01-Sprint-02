@@ -56,16 +56,17 @@ function letterSpaces(){
     box2.textContent=secret[i];
     letters.appendChild(box2);
   }
-
 }
+
 function check(event){
-  
-  //document.getElementById("empty").value="";
-  let wrong=new RegExp("[¡"+wrongLetters+"['Á-ÿá-ÿ +"+'¿?¨_.,#!$%\^&\*;:{}=`´~()”“"/|°¬<>-'+"]");
-  if(!stopp && event.key!="Enter"){
+  let e=document.getElementById("empty").value;
+  console.log(e);
+  let wrong=new RegExp("[¡"+wrongLetters+"['0-9Á-ÿá-ÿ +"+'¿?¨_.,#!$%\^&\*;:{}=`´~()”“"/|°¬<>-'+"]");
+  if(!stopp && e!="Enter"){
   let regexp="["+secret+"]";
   let re = new RegExp(regexp);
-  var keyboard = event.key.toString().toUpperCase(); 
+  var keyboard = e.toUpperCase(); 
+  console.log(keyboard);
         if (re.test(keyboard)) {
           let i = 0;
           while ( i <= secret.length) {
@@ -74,6 +75,7 @@ function check(event){
               if (box.className!='visible'){
                 winner++;
                 box.className='visible'
+                document.getElementById("empty").value="";
               }             
               if (winner==secret.length){
                message.textContent="Felicidades!\r\nHas ganado :)"
@@ -89,6 +91,7 @@ function check(event){
         else{
           if(!wrong.test(keyboard)){
             wrongLetters=wrongLetters+keyboard;
+            console.log(wrongLetters)
             drawMan(tries);
             tries++;
             let mistakes = document.getElementById("mistakes");
@@ -96,15 +99,24 @@ function check(event){
             letter.textContent=keyboard;
             mistakes.appendChild(letter);
             letter.setAttribute("class","mistakes");
+            document.getElementById("empty").value="";
           }
         }
   }
+  document.getElementById("empty").value="";
+
 }
-document.getElementById("empty").addEventListener('keypress', function(event) {
+
+document.getElementById("empty").addEventListener('keyup', function(event) {
+  if (event.code === 'Enter') {
+    event.preventDefault();
+    return false;
+  }
   check(event);
 });
-document.addEventListener('keyup', function(event) {
-  check(event);
+
+document.addEventListener('click', function(event) {
+  document.getElementById("empty").focus();
 });
 
 function ValidStor(){
@@ -133,7 +145,7 @@ function deleteChilds(id){
 function play(){
   message.textContent="";
   stopp =false;
-  wrongLetters="0-9Á-ÿ";
+  wrongLetters=" ";
   tries = 0;
   winner=0;
   deleteChilds("wordSpaces")

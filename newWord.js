@@ -84,6 +84,7 @@ function checkPattern(){
     }else{
         noIssue();
     }
+    
 }
 
 function validateStorage(){
@@ -117,8 +118,25 @@ function specialGame(){
     localStorage.setItem("unicWord",true);
     window.location.href = 'juego-ahorcado.html';
 }
+document.addEventListener('keypress', function(event) {
+    if (event.code === 'Enter') {
+        event.preventDefault();
+        return false;
+    }
+});
 
-document.getElementById('inputWords').addEventListener("keyup", checkPattern);
+
+document.getElementById('inputWords').addEventListener("keyup", function(event){
+    if (event.code === 'Enter') {
+        event.preventDefault();
+        console.log(event.code);
+        return false;
+    }
+    else{
+        checkPattern();
+        }
+})
+
 let storage=[];
 let storageUsr=[];
 let wordsPreset=localStorage.getItem("presaved");

@@ -388,6 +388,15 @@ box{
     right: 15vw;
     }
 
+    .word{
+        font-size: 24px;
+    }
+
+    #man{
+        position: relative;
+        left: 13vw;
+    }
+
     /*palabras-nuevas*/
 
     .options{
